@@ -11,15 +11,15 @@
 #define BUFF_SIZE 1024
 
 /* FLAGS */
-#define FLAG_MINUS 1  
+#define FLAG_MINUS 1
 #define FLAG_PLUS 2
-#define FLAG_ZERO 4       
+#define FLAG_ZERO 4
 #define FLAG_HASH 8
 #define FLAG_SPACE 16
 
 /* SIZES */
-#define SIZE_LONG 2   
-#define SIZE_SHORT 1      
+#define SIZE_LONG 2
+#define SIZE_SHORT 1
 
 /**
  * struct fmt - Struct op
@@ -109,7 +109,7 @@ int write_unsgnd(int is_negative, int ind,
 char buffer[],
 	int flags, int width, int precision, int size);
 
-/ *UTILS* /
+/* UTILS */
 int is_printable(char);
 int append_hexa_code(char, char[], int);
 int is_digit(char);
