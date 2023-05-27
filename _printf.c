@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 {
 	int x;
 	int  print = 0, print_c = 0;
-	int v_f, v_w, v_pr, v_size, b_ind = 0;
+	int v_f, v_w, v_pr, v_s, b_ind = 0;
 	va_list ptr;
 	char buffer[BUFFER_SIZE];
 
@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 		if (format[x] != '%')
 		{
 			buffer[b_ind++] = format[x];
-			if (b_ind == BUFF_SIZE)
+			if (b_ind == BUFFER_SIZE)
 				print_buffer(buffer, &b_ind);
 			/* write(1, &format[x], 1);*/
 			print_c++;
