@@ -13,7 +13,7 @@ int print_reverse_string(va_list args)
 
 	input_str = va_arg(args, const char *);
 	str_len = _strlen(input_str);
-	idx = str_len - 1;
+	idx = str_len;
 
 	do {
 		_putchar(input_str[idx]);

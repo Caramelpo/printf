@@ -41,13 +41,11 @@ int print_pointer(va_list num)
 int _strcmp(char *str1, char *str2)
 {
 	int o = 0;
-	int diff;
 
 	do {
-		diff = str1[o] - str2[o];
-		if (diff != 0)
+		if (str1[o] != str2[o])
 		{
-			return (diff);
+			return (str1[o] - str2[o]);
 		}
 		o++;
 	} while (str1[o] != '\0');
