@@ -42,13 +42,13 @@ int _strcmp(char *str1, char *str2)
 {
 	int o = 0;
 
-	do {
+	for (; str1[o] != '\0'; o++)
+	{
 		if (str1[o] != str2[o])
 		{
 			return (str1[o] - str2[o]);
 		}
-		o++;
-	} while (str1[o] != '\0');
+	}
 
 	return (0);
 }
