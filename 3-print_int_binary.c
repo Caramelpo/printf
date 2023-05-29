@@ -9,10 +9,8 @@ int print_binary(va_list arg_list)
 {
 	int length;
 	char *binary_buffer;
-	unsigned int number;
 
-	number = va_arg(arg_list, unsigned int);
-	binary_buffer = itoa(number, 2);
+	binary_buffer = itoa(va_arg(arg_list, unsigned int), 2);
 
 	length = print(binary_buffer);
 
