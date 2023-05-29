@@ -20,9 +20,12 @@ char *itoa(long int a, int b)
 		numb = -a;
 		ind = '-';
 	}
-	for (q = &buffer[49], *q = '\0'; numb != 0; *(--q) = tab[numb % b])
+	q = &buffer[49];
+	*q = '\0';
+
+	for (; numb != 0; numb = numb / b)
 	{
-		numb = numb / b;
+		*(--q) = tab[numb % b];
 	}
 
 	if (ind)

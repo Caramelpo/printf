@@ -29,7 +29,6 @@ int print_hexadecimal_upp(va_list);
 int print_pointer(va_list);
 int print_reverse_string(va_list);
 
-
 /* utils_functions*/
 int _strlen(const char *);
 int print(char *);

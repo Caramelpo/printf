@@ -9,10 +9,13 @@
 int print_string(va_list a)
 {
 	int ext;
+	char *y;
 
-	if (va_arg(a, char *) != NULL)
+	y = va_arg(a, char *);
+
+	if (y != NULL)
 	{
-		ext = print(va_arg(a, char*));
+		ext = print(y);
 	}
 	else
 	{
