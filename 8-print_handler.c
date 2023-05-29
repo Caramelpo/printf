@@ -17,7 +17,7 @@ int format_handler(const char *format_str, va_list args)
 	{
 		if (format_str[format_idx] == '%')
 		{
-			size = process_handler(format_str, args, &format_idx);
+			size = process_format(format_str, args, &format_idx);
 			if (size == -1)
 				return (-1);
 			total_size = total_size + size;
@@ -47,13 +47,14 @@ int process_format(const char *format_str, va_list args, int *format_idx)
 	int size = 0;
 	int num_formats;
 
-	format format[] = {
+	format formats[] = {
 		{'s', print_string}, {'c', print_char},
 		{'d', print_integer}, {'i', print_integer},
 		{'b', print_binary}, {'u', print_unsigned},
 		{'o', print_octal}, {'x', print_hexadecimal_low},
 		{'X', print_hexadecimal_upp}, {'p', print_pointer},
-		{'r', print_reverse_string}, {'R', print_encoded_rot13}};
+		{'r', print_reverse_string}, {'R', print_encoded_rot13}
+	};
 	(*format_idx)++;
 	if (format_str[*format_idx] == '\0')
 		return (-1);

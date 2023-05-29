@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_hexademical_low-the function prints a number in hexa format
+ * print_hexadecimal_low - the function prints a number in hexa format
  * @list: the integer to print in hexa format
  * Return: resultat, lenghth
  **/
-int print_hexademical_low(va_list list)
+int print_hexadecimal_low(va_list list)
 {
 	char *hex_buffer;
 	int s;
@@ -18,7 +18,7 @@ int print_hexademical_low(va_list list)
 			s = print(hex_buffer);
 		else
 		{
-			s = print("NULL")
+			s = print("NULL");
 		}
 
 		return (s);

@@ -12,19 +12,23 @@ int _strcmp(char *, char*);
 int print_pointer(va_list num)
 {
 	char *hex_str;
-	int size;
+	int dim;
 
 	hex_str = itoa(va_arg(num, unsigned long int), 16);
 	if (_strcmp(hex_str, "0") == 0)
 	{
 		return (print("(nil)"));
 	}
-	size = print("0x");
+	dim = print("0x");
 	if (_strcmp(hex_str, "-1") == 0)
 	{
-		return (size + print("ffffffffffffffff"));
+		dim = dim + print("ffffffffffffffff");
 	}
-	return (size + print("%s", hex_str));
+	else
+	{
+		dim = dim + print(hex_str);
+	}
+	return (dim);
 }
 
 /**
