@@ -15,12 +15,12 @@ int print_pointer(va_list num)
 	int dim;
 
 	hex_str = itoa(va_arg(num, unsigned long int), 16);
-	if (_strcmp(hex_str, "0") == 0)
+	if (!_strcmp(hex_str, "0"))
 	{
 		return (print("(nil)"));
 	}
 	dim = print("0x");
-	if (_strcmp(hex_str, "-1") == 0)
+	if (!_strcmp(hex_str, "-1"))
 	{
 		dim = dim + print("ffffffffffffffff");
 	}
@@ -50,7 +50,7 @@ int _strcmp(char *str1, char *str2)
 			return (diff);
 		}
 		o++;
-	} while (str1[0] != '\0');
+	} while (str1[o] != '\0');
 
 	return (0);
 }
