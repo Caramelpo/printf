@@ -15,9 +15,9 @@ int print_reverse_string(va_list args)
 	str_len = _strlen(input_str);
 	idx = str_len - 1;
 
-	do {
+	for (;idx >= 0; idx--)
+	{
 		_putchar(input_str[idx]);
-		idx--;
-	} while (idx >= 0);
+	} 
 	return (str_len);
 }
