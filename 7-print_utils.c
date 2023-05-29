@@ -10,8 +10,10 @@ int _strlen(const char *s)
 {
 	int length = 0;
 
-	while (s[length] != '\0')
+	while (s[length] != 0)
+	{
 		length++;
+	}
 	return (length);
 }
 
@@ -19,18 +21,18 @@ int _strlen(const char *s)
  * print - the function is implemented to print the string
  * entered by the user
  *
- * @s1: our string.
+ * @s: our string.
  * Return: LeNgth of the string
  */
 
-int print(char *s1)
+int print(char *s)
 {
 	int index = 0;
 
-	while (s1[index] != '\0')
+	while (s[index] != '\0')
 	{
-		_putchar(s1[index]);
-		index++;
+		_putchar(s[index]);
+		++index;
 	}
 	return (index);
 }
