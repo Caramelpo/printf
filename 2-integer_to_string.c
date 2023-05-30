@@ -23,11 +23,10 @@ char *itoa(long int a, int b)
 	q = &buffer[49];
 	*q = '\0';
 
-	while (numb != 0)
-	{
+	do {
 		*--q = tab[numb % b];
 		numb = numb / b;
-	}
+	} while (numb != 0);
 
 	if (ind)
 	{
