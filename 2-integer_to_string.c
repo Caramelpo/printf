@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * itoa - the function converts the integer to string
+ * integer_to_string - the function converts the integer to string
  * @a: the integer as input
  * @b: base
  * Return: resultant string from integer conversion
  **/
-char *itoa(long int a, int b)
+char *integer_to_string(long int a, int b)
 {
 	char ind = 0; /* indication of the integer sign pos or neg */
 	char *q; /* pointer*/

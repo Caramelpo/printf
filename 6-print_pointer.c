@@ -14,7 +14,7 @@ int print_pointer(va_list num)
 	char *hex_str;
 	int dim;
 
-	hex_str = itoa(va_arg(num, unsigned long int), 16);
+	hex_str = integer_to_string(va_arg(num, unsigned long int), 16);
 	if (!_strcmp(hex_str, "0"))
 	{
 		return (print("(nil)"));

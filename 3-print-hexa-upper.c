@@ -13,7 +13,7 @@ int print_hexadecimal_upp(va_list arg_list)
 	char *hex_buffer;
 	int s;
 
-	hex_buffer = itoa(va_arg(arg_list, unsigned int), 16);
+	hex_buffer = integer_to_string(va_arg(arg_list, unsigned int), 16);
 	hex_buffer = str_to_upp(hex_buffer);
 
 	s = print((hex_buffer != NULL) ? hex_buffer : "NULL");

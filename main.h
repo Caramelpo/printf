@@ -34,7 +34,7 @@ int print_reverse_string(va_list);
 /* utils_functions*/
 int _strlen(const char *);
 int print(char *);
-char *itoa(long int, int);
+char *integer_to_string(long int, int);
 
 /**
  * struct _format - Type definition as struct
