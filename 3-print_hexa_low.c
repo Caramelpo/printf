@@ -12,7 +12,7 @@ int print_hexadecimal_low(va_list list)
 
 	unsigned int number = va_arg(list, unsigned int);
 
-	hex_buffer = itoa(number, 16);
+	hex_buffer = integer_to_string(number, 16);
 
 		if (hex_buffer != NULL)
 			s = print(hex_buffer);
