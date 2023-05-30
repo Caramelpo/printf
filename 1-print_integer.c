@@ -12,7 +12,7 @@ int print_integer(va_list list)
 	int s;
 	char *ptr_buffer;
 
-	ptr_buffer = itoa(va_arg(list, int), 10);
+	ptr_buffer = integer_to_string(va_arg(list, int), 10);
 	s = print((ptr_buffer != NULL) ? ptr_buffer : "NULL");
 	return (s);
 }
