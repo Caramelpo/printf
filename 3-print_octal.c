@@ -12,7 +12,7 @@ int print_octal(va_list list)
 
 	unsigned int number = va_arg(list, unsigned int);
 
-	oct_buffer = itoa(number, 8);
+	oct_buffer = integer_to_string(number, 8);
 
 	if (oct_buffer != NULL)
 		s = print(oct_buffer);
