@@ -10,7 +10,7 @@ int print_binary(va_list arg_list)
 	int length;
 	char *binary_buffer;
 
-	binary_buffer = itoa(va_arg(arg_list, unsigned int), 2);
+	binary_buffer = integer_to_string(va_arg(arg_list, unsigned int), 2);
 
 	length = print(binary_buffer);
 
