@@ -25,13 +25,13 @@ char *itoa(long int a, int b)
 
 	while (numb != 0)
 	{
-		*(--q) = tab[numb % b];
+		*--q = tab[numb % b];
 		numb = numb / b;
 	}
 
 	if (ind)
 	{
-		*(--q) = ind;
+		*--q = ind;
 	}
 	return (q);
 }
